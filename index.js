@@ -656,6 +656,5 @@ const NumerosPaginas = libros.map((libros) => {
 })
 .sort((a,b) => b.paginas - a.paginas);
 
-// EjecutarMenu2();
+ EjecutarMenu2();
 
-console.table(NumerosPaginas)
