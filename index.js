@@ -623,7 +623,7 @@ function Descuento() {
 // console.table(DESCUENTO);
 
 
-const librosCaros = libros.filter((libros) => {
+const librosCaros50 = libros.filter((libros) => {
 
   return libros.precio > 50;
 })
@@ -656,5 +656,75 @@ const NumerosPaginas = libros.map((libros) => {
 })
 .sort((a,b) => b.paginas - a.paginas);
 
- EjecutarMenu2();
 
+
+// Manejo Array Methods encadenados.
+
+const librosCaros11 = libros.filter((libros) => {
+
+  return libros.precio > 11;
+})
+
+.map((libros) => {
+
+  return {
+    titulo: libros.titulo,
+    autor: libros.autor,
+    editorial: libros.editorial,
+    precio: libros.precio,
+    paginas: libros.paginas
+  };
+})
+
+.sort((a,b) => b.precio - a.precio);
+
+const librosCaros100 = libros.filter((libros) => {
+
+  return libros.paginas < 100;
+})
+
+.map((libros) => {
+
+  return {
+    titulo: libros.titulo,
+    autor: libros.autor,
+    editorial: libros.editorial,
+    precio: libros.precio,
+    paginas: libros.paginas
+  };
+})
+
+.sort((a,b) => b.precio - a.precio);
+
+const librosCaros20 = libros.filter((libros) => {
+
+  return libros.precio > 20;
+})
+
+.map((libros) => {
+
+  return {
+    titulo: libros.titulo,
+    autor: libros.autor,
+    editorial: libros.editorial,
+    precio: libros.precio,
+    paginas: libros.paginas
+  };
+})
+.sort((a,b) => b.precio - a.precio);
+
+
+const NumerosAltosPaginas = libros.map((libros) => {
+
+  return {
+    titulo: libros.titulo,
+    autor: libros.autor,
+    editorial: libros.editorial,
+    precio: libros.precio,
+    paginas: libros.paginas
+  };
+
+})
+.sort((a,b) => b.paginas - a.paginas);
+
+console.table(NumerosPaginas)
