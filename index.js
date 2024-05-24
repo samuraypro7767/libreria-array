@@ -1229,7 +1229,28 @@ const Descripcion = libros.map((libros) => {
 }
 });
 
+function Descuento() {
+  const DESCUENTO = libros.map(function(libro) {
+      return {
+          ...libro,
+          descuento: 20,
+          precio_final: libro.precio - (libro.precio * 0.2)
+      };
+  });
 
+  const DESCUENTO_PRECIO = DESCUENTO.map(function(libro) {
+      return {
+          titulo: libro.titulo, 
+          autor: libro.autor, 
+          editorial: libro.editorial, 
+          precio: libro.precio,
+          descuento: libro.descuento,
+          precio_final: libro.precio_final
+      };
+  });
+
+  return console.table(DESCUENTO_PRECIO);
+}
 // console.table(DESCUENTO);
 
 
