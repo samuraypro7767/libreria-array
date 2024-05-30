@@ -388,104 +388,194 @@ function mostrarLibros() {
   console.log("libros actuales :");
   console.table(libros);
 }
-
 function Menu() {
-  menu=("Menú de opciones:\n\n"),
-  menu+=("1. Agregar libro\n"),
-  menu+=("2. Quitar libro\n"),
-  menu+=("3. Mostrar libros\n"),
-  menu+=("4. ver titulo\n"),
-  menu+=("5. ver paginas\n"),
-  menu+=("6. ver idioma\n"),
-  menu+=("7. ver fecha\n"),
-  menu+=("8. ver estado\n"),
-  menu+=("9. ver formato\n"),
-  menu+=("10. ver peso\n"),
-  menu+=("11. ver dimesiones\n"),
-  menu+=("12. ver ubicacion\n"),
-  menu+=("13. ver ISBN\n"),
-  menu+=("14. ver descripcion\n"),
-  menu+=("15. ver descuento total\n"),
-  menu+=("16. Salir\n\n"),
-  menu+=("Ingrese la opcion :");
-  return parseInt(prompt(menu));
-  
+  menu = 'Menu libreria\n\n'
+  menu += '1: agregar nuevo libro\n'
+  menu += '2: Eliminar libro\n'
+  menu += '3: Mostrar pila de libros\n'
+  menu += '4: Mostrar menu listar libros\n'
+  menu += '5: Mostrar menu resumenes libros\n'
+  let codigo = parseInt(prompt(menu))
+
+  return codigo
 }
 
-function ejecutarMenu() {
- 
-  let opcion = Menu();
- switch (opcion) {
-   case 1:
-     agregarLibro();
+function EjecutarMenu() {
+  let x = Menu()
+  switch (x) {
+  case 1:
+      agregarLibro();
+      EjecutarMenu2();
+      break;
+  case 2:
+      quitarLibro();
+      EjecutarMenu2();
+      break;
+  case 3:
+      mostrarLibros();
+      EjecutarMenu2();
+      break;
+  case 4:
+     EjecutarMenu3()
+     break; 
+ case 5:
+     EjecutarMenu4()
      break;
-   case 2:
-     quitarLibro();
-     break;
-   case 3:
-     mostrarLibros();
-     break;
-   case 4:
-    console.table(TITULO);
-     break;
-   case 5:
-    console.table(PAGINAS);
-     break;
-   case 6:
-    console.table(IDIOMA);
-     break;
-   case 7:
-    console.table(FECHA);
-     break;
-   case 8:
-    console.table(ESTADO);
-     break;
-   case 9:
-    console.table(FORMATO);
-     break;
-   case 10:
-    console.table(DIMENSIONES);
-     break;
-   case 11:
-    console.table(PESO);
-     break;
-   case 12:
-    console.table(UBICACION);
-     break;
-   case 13:
-    console.table(ISBN);
-     break;
-   case 14:
-    console.table(DESCRIPCION);
-     break;
-   case 15:
-    Descuento();
-     break;
-   case 16:
-     console.log("Hasta luego!");
-     opcion = false;
-     break;
-   default:
-     console.log("Opción inválida, intente de nuevo.");
- }
- 
- 
- }
- 
- function Menu2() {
-  ejecutarMenu();
-  return confirm('Desea continuar en el menu');
-}
+  default: 
+      false;
+      break;
 
-function EjecutarMenu2() {
-  if (Menu2()) {
-    ejecutarMenu();
-    EjecutarMenu2();
-  } else {
-    alert('Salió del menú');
   }
 }
 
+function Menu2() {
+  let menu = 'Desea continuar en el menu\n\n';
+  menu += '1: si\n';
+  menu += '2: no\n\n';
+  menu += 'Elija una opcion: ';
+  let codigo = parseInt(prompt(menu));
+
+  return codigo;
+}
+function EjecutarMenu2() {
+ let continuar = true;
+
+      let x = Menu2();
+      switch (x) {
+          case 1:
+              EjecutarMenu();
+              continuar == true;
+              break;
+          case 2:
+              alert('Salio del menu');
+              continuar = false;
+              break;
+          default:
+              alert('Opcion no valida. Intente de nuevo.');
+              break;
+      }
+  }
+
+
+
+function Menu3() {
+ menu = 'Menu listar libros\n\n'
+ menu += '1: Mostrar titulo\n'
+ menu += '2: Mostrar paginas\n'
+ menu += '3: Mostrar idioma\n'
+ menu += '4: Mostrar estado\n'
+ menu += '5: Mostrar formato\n'
+ menu += '6: Mostrar peso\n'
+ menu += '7: Mostrar dimenciones\n'
+ menu += '8: Mostrar ubicacion\n'
+ menu += '9: Mostrar isbn\n'
+ menu += '10: Mostrar descripcion\n'
+ menu += '11: Mostrar estado\n'
+ menu += '12: Mostrar descuento\n\n'
+ menu += 'elija una opcion\n'
+ let codigo = parseInt(prompt(menu))
+
+ return codigo
+}
+
+function EjecutarMenu3() {
+ let x = Menu3()
+ switch (x) {
+ case 1:
+     console.table(TITULO);
+     EjecutarMenu2();
+     break;
+ case 2:
+     console.table(PAGINAS);
+     EjecutarMenu2();
+     break; 
+ case 3:
+     console.table(IDIOMA)
+     EjecutarMenu2()
+     break;
+ case 4:
+     console.table(ESTADO)
+     EjecutarMenu2()
+     break;
+ case 5:
+     console.table(FORMATO)
+     EjecutarMenu2()
+     break;
+ case 6:
+     console.table(PESO)
+     EjecutarMenu2()
+     break;
+ case 7:
+     console.table(DIMENSIONES)
+     EjecutarMenu2()
+     break;  
+ case 8:
+     console.table(UBICACION)
+     EjecutarMenu2()
+     break;
+ case 9:
+     console.table(ISBN)
+     EjecutarMenu2()
+     break;
+ case 10:
+     console.table(DESCRIPCION)
+     EjecutarMenu2()
+     break;
+ case 11:
+     console.table(GENERO)
+     EjecutarMenu2()
+     break;
+ case 12:
+     Descuento()
+     EjecutarMenu2()
+     break; 
+ default: 
+     false;
+     break;
+ }
+}
+
+function Menu4() {
+ menu = 'Menu  libros\n\n'
+ menu += '1: libros con precio mayores a 50\n'
+ menu += '2: lista de paginas de mayor a menor\n'
+ menu += '3: libros con precio mayores a 11 \n'
+ menu += '4: lista de libros con paginas menores de 100\n'
+ menu += '5: libros con precio mayores que 20 de mayor a menor\n\n'
+ menu += 'elija una opcion\n'
+ let codigo = parseInt(prompt(menu))
+
+ return codigo
+}
+
+function EjecutarMenu4() {
+ let x = Menu4()
+ switch (x) {
+ case 1:
+     console.table(librosCaros50);
+     EjecutarMenu2();
+     break;
+ case 2:
+     console.table(NumerosAltosPaginas);
+     EjecutarMenu2();
+     break; 
+ case 3:
+     console.table(librosCaros11);
+     EjecutarMenu2();
+     break;
+ case 4:
+     console.table(librosCaros100);
+     EjecutarMenu2();
+     break;
+ case 5:
+     console.table(librosCaros20);
+     EjecutarMenu2();
+     break;
+ default: 
+     false;
+     break;
+ }
+}
 
 const TITULO = libros.map((libros) => {
 
@@ -595,6 +685,15 @@ const DESCRIPCION = libros.map((libros) => {
     author: libros.autor,
     editorial: libros.editorial,
     descripcion: libros.descripcion
+}
+});
+const GENERO = libros.map((libros) => {
+
+  return{
+    titulo: libros.titulo , 
+    author: libros.autor,
+    descripcion: libros.descripcion,
+    genero: libros.genero
 }
 });
 
@@ -727,4 +826,6 @@ const NumerosAltosPaginas = libros.map((libros) => {
 })
 .sort((a,b) => b.paginas - a.paginas);
 
-console.table(NumerosPaginas)
+
+
+EjecutarMenu();
