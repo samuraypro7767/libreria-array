@@ -401,8 +401,8 @@ function Menu() {
 }
 
 function EjecutarMenu() {
-  let x = Menu()
-  switch (x) {
+  let codigoIngresado = Menu()
+  switch (codigoIngresado) {
   case 1:
       agregarLibro();
       EjecutarMenu2();
@@ -440,8 +440,8 @@ function Menu2() {
 function EjecutarMenu2() {
  let continuar = true;
 
-      let x = Menu2();
-      switch (x) {
+      let codigo = Menu2();
+      switch (codigo) {
           case 1:
               EjecutarMenu();
               continuar == true;
@@ -479,8 +479,8 @@ function Menu3() {
 }
 
 function EjecutarMenu3() {
- let x = Menu3()
- switch (x) {
+ let codigoIngresado = Menu3()
+ switch (codigoIngresado) {
  case 1:
      console.table(TITULO);
      EjecutarMenu2();
@@ -549,8 +549,8 @@ function Menu4() {
 }
 
 function EjecutarMenu4() {
- let x = Menu4()
- switch (x) {
+ let codigoIngresado = Menu4()
+ switch (codigoIngresado) {
  case 1:
      console.table(librosCaros50);
      EjecutarMenu2();
