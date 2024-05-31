@@ -456,6 +456,7 @@ function EjecutarMenu2() {
               break;
           default:
               alert('Opcion no valida. Intente de nuevo.');
+              EjecutarMenu();
               break;
       }
   }
@@ -580,7 +581,7 @@ function EjecutarMenu4() {
      break;
  }
 }
-function Menu5() {
+function MenuConsulta() {
   menu = 'Menu busqueda de libros\n\n'
   menu += '1: Buscar titulo\n'
   menu += '2: Buscar autor\n'
@@ -604,7 +605,7 @@ function Menu5() {
 }
 
 function MenuBusqueda() {
-  let codigoMenu = Menu5()
+  let codigoMenu = MenuConsulta();
   switch (codigoMenu) {
   case 1:
       BuscarTitulo();
