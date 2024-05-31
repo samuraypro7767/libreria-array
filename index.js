@@ -395,6 +395,7 @@ function Menu() {
   menu += '3: Mostrar pila de libros\n'
   menu += '4: Mostrar menu listar libros\n'
   menu += '5: Mostrar menu resumenes libros\n'
+  menu += '6: consultar  libros\n'
   let codigo = parseInt(prompt(menu))
 
   return codigo
@@ -420,6 +421,9 @@ function EjecutarMenu() {
      break; 
  case 5:
      EjecutarMenu4()
+     break;
+ case 6:
+    MenuBusqueda();
      break;
   default: 
       false;
@@ -575,6 +579,99 @@ function EjecutarMenu4() {
      false;
      break;
  }
+}
+function Menu5() {
+  menu = 'Menu busqueda de libros\n\n'
+  menu += '1: Buscar titulo\n'
+  menu += '2: Buscar autor\n'
+  menu += '3: Buscar fecha de publicacion\n'
+  menu += '4: Buscar genero\n'
+  menu += '5: Buscar idioma\n'
+  menu += '6: Buscar precio\n'
+  menu += '7: Buscar formato\n'
+  menu += '8: Buscar isbn\n'
+  menu += '9: Buscar descripcion\n'
+  menu += '10: Buscar estado\n'
+  menu += '11: Buscar ubicacion\n'
+  menu += '12: Buscar editorial\n'
+  menu += '13: Buscar paginas\n'
+  menu += '14: Buscar dimenciones\n'
+  menu += '15: Buscar peso\n\n'
+  menu += 'elija una opcion\n'
+  let codigo = parseInt(prompt(menu))
+
+  return codigo
+}
+
+function MenuBusqueda() {
+  let codigoMenu = Menu5()
+  switch (codigoMenu) {
+  case 1:
+      BuscarTitulo();
+      EjecutarMenu2();
+      break;
+  case 2:
+      BuscarAutor();
+      EjecutarMenu2();
+      break; 
+  case 3:
+      BuscarFechaPublicacion();
+      EjecutarMenu2();
+      break;
+  case 4:
+      BuscarGenero();
+      EjecutarMenu2();
+      break;
+  case 5:
+      BuscarIdioma();
+      EjecutarMenu2();
+      break;
+  case 6:
+      BuscarPrecio();
+      EjecutarMenu2();
+      break;
+  case 7:
+      BuscarFormato();
+      EjecutarMenu2();
+      break; 
+  case 8:
+      BuscarIsbn();
+      EjecutarMenu2();
+      break;
+  case 9:
+      BuscarDescipcion();
+      EjecutarMenu2();
+      break;
+  case 10:
+      BuscarEstado();
+      EjecutarMenu2();
+      break;
+  case 11:
+      BuscarUbicacion();
+      EjecutarMenu2();
+      break;
+  case 12:
+      BuscarEditorial();
+      EjecutarMenu2();
+      break; 
+  case 13:
+      BuscarPaginas();
+      EjecutarMenu2();
+      break;
+  case 14:
+      BuscarDimensiones();
+      EjecutarMenu2();
+      break;
+  case 15:
+      BuscarPeso();
+      EjecutarMenu2();
+      break;
+  default: 
+      alert("opcion no valida vuelva a interntarlo");
+      EjecutarMenu2();
+      false;
+      break;
+  }
 }
 
 const TITULO = libros.map((libros) => {
@@ -828,4 +925,142 @@ const NumerosAltosPaginas = libros.map((libros) => {
 
 
 
-EjecutarMenu();
+
+
+
+function BuscarTitulo() {
+    tituloIngresado = prompt("ingrese el titulo del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.titulo === tituloIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarAutor() {
+    autorIngresado = prompt("ingrese el autor del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.autor === autorIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarFechaPublicacion() {
+    fecha_publicacionIngresado = parseInt(prompt("ingrese la fecha de publicacion del libro"))
+
+    let algunlibro = libros.find((libro) => {
+        return libro.fecha_publicacion === fecha_publicacionIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarGenero() {
+    generoIngresado = prompt("ingrese el genero del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.genero === generoIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarIdioma() {
+    idiomaIngresado = prompt("ingrese el idioma del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.idioma === idiomaIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarPrecio() {
+    precioIngresado = parseFloat(prompt("ingrese el precio del libro"))
+
+    let algunlibro = libros.find((libro) => {
+        return libro.precio === precioIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarFormato() {
+    formatoIngresado = prompt("ingrese el formato del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.formato === formatoIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarIsbn() {
+    isbnIngresado = prompt("ingrese el isbn del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.isbn === isbnIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarDescipcion() {
+    descripcionIngresado = prompt("ingrese la descripcion del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.descripcion === descripcionIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarEstado() {
+    estadoIngresado = prompt("ingrese la estado del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.estado === estadoIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarUbicacion() {
+    ubicacionIngresado = prompt("ingrese la ubicacion del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.ubicacion === ubicacionIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarEditorial() {
+    editorialIngresado = prompt("ingrese la editorial del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.editorial === editorialIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarPaginas() {
+    paginasIngresado = parseInt(prompt("ingrese la paginas del libro"))
+
+    let algunlibro = libros.find((libro) => {
+        return libro.paginas === paginasIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarDimensiones() {
+    dimensionesIngresado = prompt("ingrese la dimensiones del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.dimensiones === dimensionesIngresado;
+    });
+    console.table(algunlibro);
+}
+
+function BuscarPeso() {
+    pesoIngresado = prompt("ingrese la peso del libro")
+
+    let algunlibro = libros.find((libro) => {
+        return libro.peso === pesoIngresado;
+    });
+    console.table(algunlibro);
+}
+
+  EjecutarMenu();
