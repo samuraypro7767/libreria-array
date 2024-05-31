@@ -423,6 +423,7 @@ function EjecutarMenu() {
      EjecutarMenu4()
      break;
  case 6:
+  console.table(libros)
     MenuBusqueda();
      break;
   default: 
@@ -600,7 +601,7 @@ function MenuConsulta() {
   menu += '15: Buscar peso\n\n'
   menu += 'elija una opcion\n'
   let codigo = parseInt(prompt(menu))
-
+  
   return codigo
 }
 
@@ -930,7 +931,7 @@ const NumerosAltosPaginas = libros.map((libros) => {
 
 
 function BuscarTitulo() {
-    tituloIngresado = prompt("ingrese el titulo del libro")
+    tituloIngresado = prompt("ingrese el titulo del libro ej: El gran Gatsby")
 
     let algunlibro = libros.find((libro) => {
         return libro.titulo === tituloIngresado;
@@ -948,7 +949,7 @@ function BuscarAutor() {
 }
 
 function BuscarFechaPublicacion() {
-    fecha_publicacionIngresado = parseInt(prompt("ingrese la fecha de publicacion del libro"))
+    fecha_publicacionIngresado = parseInt(prompt("ingrese la fecha de publicacion del libro ej : (1991,10 de abril de 1925)"))
 
     let algunlibro = libros.find((libro) => {
         return libro.fecha_publicacion === fecha_publicacionIngresado;
@@ -957,7 +958,7 @@ function BuscarFechaPublicacion() {
 }
 
 function BuscarGenero() {
-    generoIngresado = prompt("ingrese el genero del libro")
+    generoIngresado = prompt("ingrese el genero del libro ej: Novela modernista")
 
     let algunlibro = libros.find((libro) => {
         return libro.genero === generoIngresado;
@@ -966,7 +967,7 @@ function BuscarGenero() {
 }
 
 function BuscarIdioma() {
-    idiomaIngresado = prompt("ingrese el idioma del libro")
+    idiomaIngresado = prompt("ingrese el idioma del libro ej:Inglés ")
 
     let algunlibro = libros.find((libro) => {
         return libro.idioma === idiomaIngresado;
@@ -975,7 +976,7 @@ function BuscarIdioma() {
 }
 
 function BuscarPrecio() {
-    precioIngresado = parseFloat(prompt("ingrese el precio del libro"))
+    precioIngresado = parseFloat(prompt("ingrese el precio del libro ej:51.99"))
 
     let algunlibro = libros.find((libro) => {
         return libro.precio === precioIngresado;
@@ -984,7 +985,7 @@ function BuscarPrecio() {
 }
 
 function BuscarFormato() {
-    formatoIngresado = prompt("ingrese el formato del libro")
+    formatoIngresado = prompt("ingrese el formato del libro ej: Físico")
 
     let algunlibro = libros.find((libro) => {
         return libro.formato === formatoIngresado;
@@ -993,7 +994,7 @@ function BuscarFormato() {
 }
 
 function BuscarIsbn() {
-    isbnIngresado = prompt("ingrese el isbn del libro")
+    isbnIngresado = prompt("ingrese el isbn del libro ej : 978-0-451-eda60-9")
 
     let algunlibro = libros.find((libro) => {
         return libro.isbn === isbnIngresado;
@@ -1002,7 +1003,7 @@ function BuscarIsbn() {
 }
 
 function BuscarDescipcion() {
-    descripcionIngresado = prompt("ingrese la descripcion del libro")
+    descripcionIngresado = prompt("ingrese la descripcion del libro ej: Una novela clásica que describe la vida de Jay Gatsby, un misterioso millonario que vive en la costa este de Estados Unidos en los años 20.")
 
     let algunlibro = libros.find((libro) => {
         return libro.descripcion === descripcionIngresado;
@@ -1011,7 +1012,7 @@ function BuscarDescipcion() {
 }
 
 function BuscarEstado() {
-    estadoIngresado = prompt("ingrese la estado del libro")
+    estadoIngresado = prompt("ingrese la estado del libro ej: Usado")
 
     let algunlibro = libros.find((libro) => {
         return libro.estado === estadoIngresado;
@@ -1020,7 +1021,7 @@ function BuscarEstado() {
 }
 
 function BuscarUbicacion() {
-    ubicacionIngresado = prompt("ingrese la ubicacion del libro")
+    ubicacionIngresado = prompt("ingrese la ubicacion del libro ej: Estante 1, Biblioteca de la Ciudad")
 
     let algunlibro = libros.find((libro) => {
         return libro.ubicacion === ubicacionIngresado;
@@ -1029,7 +1030,7 @@ function BuscarUbicacion() {
 }
 
 function BuscarEditorial() {
-    editorialIngresado = prompt("ingrese la editorial del libro")
+    editorialIngresado = prompt("ingrese la editorial del libro ej: Scribner")
 
     let algunlibro = libros.find((libro) => {
         return libro.editorial === editorialIngresado;
@@ -1038,7 +1039,7 @@ function BuscarEditorial() {
 }
 
 function BuscarPaginas() {
-    paginasIngresado = parseInt(prompt("ingrese la paginas del libro"))
+    paginasIngresado = parseInt(prompt("ingrese la paginas del libro ej: 218"))
 
     let algunlibro = libros.find((libro) => {
         return libro.paginas === paginasIngresado;
@@ -1047,7 +1048,7 @@ function BuscarPaginas() {
 }
 
 function BuscarDimensiones() {
-    dimensionesIngresado = prompt("ingrese la dimensiones del libro")
+    dimensionesIngresado = prompt("ingrese la dimensiones del libro ej:20.5 x 13.5 x 2.5 cm")
 
     let algunlibro = libros.find((libro) => {
         return libro.dimensiones === dimensionesIngresado;
@@ -1056,7 +1057,7 @@ function BuscarDimensiones() {
 }
 
 function BuscarPeso() {
-    pesoIngresado = prompt("ingrese la peso del libro")
+    pesoIngresado = prompt("ingrese la peso del libro ej: 350 gramos")
 
     let algunlibro = libros.find((libro) => {
         return libro.peso === pesoIngresado;
@@ -1065,3 +1066,18 @@ function BuscarPeso() {
 }
 
   EjecutarMenu();
+  // titulo: "El gran Gatsby",
+  // autor: "F. Scott Fitzgerald",
+  // genero: "Novela modernista",
+  // idioma: "Inglés",
+  // precio: 51.99,
+  // formato: "Físico",
+  // isbn: "978-0-451-eda60-9",
+  // descripcion: "Una novela clásica que describe la vida de Jay Gatsby, un misterioso millonario que vive en la costa este de Estados Unidos en los años 20.",
+  // estado: "Usado",
+  // ubicacion: "Estante 1, Biblioteca de la Ciudad",
+  // fecha_publicacion: "10 de abril de 1925",
+  // editorial: "Scribner",
+  // paginas: 218,
+  // dimensiones: "20.5 x 13.5 x 2.5 cm",
+  // peso: "350 gramos",
