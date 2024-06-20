@@ -1,6 +1,4 @@
 
-
-
 let libros = [
 
 {
@@ -390,7 +388,7 @@ function mostrarLibros() {
 }
 function Menu() {
   menu = 'Menu libreria\n\n'
-  menu += '1: agregar nuevo libro\n'
+  menu += '1: agregar  libro\n'
   menu += '2: Eliminar libro\n'
   menu += '3: Mostrar pila de libros\n'
   menu += '4: Mostrar menu listar libros\n'
