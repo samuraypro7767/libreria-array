@@ -679,7 +679,6 @@ const TITULO = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     precio: libros.precio
 }
 });
@@ -689,7 +688,6 @@ const PAGINAS = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     Paginas: libros.paginas, 
    
 }
@@ -700,7 +698,6 @@ const IDIOMA = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     idioma: libros.idioma
 }
 });
@@ -710,7 +707,6 @@ const FECHA = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     fecha_publicacion: libros.fecha_publicacion
 }
 });
@@ -720,7 +716,6 @@ const ESTADO = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     estado: libros.estado
 }
 });
@@ -730,7 +725,6 @@ const FORMATO = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     formato: libros.formato
 }
 });
@@ -740,7 +734,6 @@ const PESO = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     peso: libros.peso
 }
 });
@@ -750,7 +743,6 @@ const DIMENSIONES = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     dimensiones: libros.dimensiones
 }
 });
@@ -760,7 +752,6 @@ const UBICACION = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     fecha: libros.ubicacion
 }
 });
@@ -770,7 +761,6 @@ const ISBN = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     isbn: libros.isbn
 }
 });
@@ -780,7 +770,6 @@ const DESCRIPCION = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    editorial: libros.editorial,
     descripcion: libros.descripcion
 }
 });
@@ -789,7 +778,6 @@ const GENERO = libros.map((libros) => {
   return{
     titulo: libros.titulo , 
     author: libros.autor,
-    descripcion: libros.descripcion,
     genero: libros.genero
 }
 });
@@ -807,7 +795,6 @@ function Descuento() {
       return {
           titulo: libro.titulo, 
           autor: libro.autor, 
-          editorial: libro.editorial, 
           precio: libro.precio,
           descuento: libro.descuento,
           precio_final: libro.precio_final
